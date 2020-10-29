@@ -5,7 +5,7 @@
     --facebook: hsl(208, 92%, 53%);
     --twitter: hsl(203, 89%, 53%);
     --youtube: hsl(348, 97%, 39%);
-    --instagram: linear-gradient(hsl(37, 97%, 70%) to hsl(329, 70%, 58%));
+    --instagram: hsl(37, 97%, 70%) to hsl(329, 70%, 58%);   
 
     /* LIGHT */
     --backgroundTop: hsl(225, 100%, 98%);
@@ -31,14 +31,22 @@
 }
 
 
+.container {
+    width: 90%;
+    margin: auto;
+}
 
 #header {
     background: var(--backgroundTop);
-    height: 50vh;
+    padding: 50px 0;
+}
+
+#header .container{
+    justify-content: space-between;
+    height: 30vh;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    padding: 50px 0;
+    
 }
 
 #header-text h2{
@@ -49,32 +57,67 @@
     color: var(--cardText)
 }
 
+#summary {
+    margin-top: -150px;
+}
+
+#summary .container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 .summary-card {
     background: var(--cardBackground);
     width: 25%;
-    height: 20vh;
+    height: 35vh;
     text-align: center;
     padding: 30px 0;
+    margin: 0 20px;
+    border-radius: 10px;
 }
 
 div#facebook.summary-card {
     border-top: 3px solid var(--facebook);
 }
 
+div#twitter.summary-card {
+    border-top: 3px solid var(--twitter);
+}
+
+div#instagram.summary-card {
+    border-top: 3px solid linear-gradient(to right,hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+}
+
+div#youtube.summary-card {
+    border-top: 3px solid var(--youtube);
+}
+
+.summary-card p {
+    font-size: 12px;
+}
+
 .summary-card .username {
-    color: var(--cardText)
+    color: var(--cardText);
+    padding: 10px 0;
+    font-weight: 800;
 }
 
 .summary-card .count {
-    color: var(--cardCountText)
-    
+    color: var(--cardCountText);
+    padding: 10px 0;
+    font-size: 48px;
 }
 
 .summary-card .followers {
     color: var(--cardText);
     letter-spacing: 5px;
+    padding: 10px 0;
+    text-transform: uppercase;
 }
 
 .summary-card .increase {
-    color: var(--limeGreen)
+    color: var(--limeGreen);
+    padding: 10px 0;
+    font-weight: 800;
 }
