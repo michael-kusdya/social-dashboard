@@ -13,6 +13,8 @@
     --cardBackground: hsl(227, 47%, 96%);
     --cardText: hsl(228, 12%, 44%);
     --cardCountText: hsl(230, 17%, 14%);
+    --switchCircle: white;
+    --switchBackground: #ccc;
 }
 
 [data-theme="dark"] {
@@ -21,6 +23,8 @@
     --cardBackground: hsl(228, 28%, 20%);
     --cardText: hsl(228, 34%, 66%);
     --cardCountText: hsl(0, 0%, 100%);
+    --switchCircle: hsl(232, 19%, 15%);
+    --switchBackground:  #2196F3;
 }
 
 * {
@@ -34,6 +38,68 @@
 .container {
     width: 90%;
     margin: auto;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--switchBackground);;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: var(--switchCircle);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: var(--switchBackground);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px var(--switchBackground);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
 }
 
 #header {
@@ -54,7 +120,8 @@
 }
 
 #header-text p {
-    color: var(--cardText)
+    color: var(--cardText);
+    font-weight: 800;
 }
 
 #summary {
@@ -62,15 +129,14 @@
 }
 
 #summary .container{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    grid-gap: 1rem;
 }
 
 .summary-card {
     background: var(--cardBackground);
-    width: 25%;
-    height: 35vh;
+    min-height: 35vh;
     text-align: center;
     padding: 30px 0;
     margin: 0 20px;
@@ -93,51 +159,79 @@ div#youtube.summary-card {
     border-top: 3px solid var(--youtube);
 }
 
-.summary-card p {
+.summary-card p, .overview-card p, .summary-card span, .overview-card span {
     font-size: 12px;
 }
 
-.summary-card .username {
-    color: var(--cardText);
+.summary-card .title {
     padding: 10px 0;
+}
+
+.title {
+    color: var(--cardText);
     font-weight: 800;
 }
 
 .summary-card .count {
-    color: var(--cardCountText);
     padding: 10px 0;
     font-size: 48px;
 }
 
-.summary-card .followers {
+.count {
+    color: var(--cardCountText);
+}
+
+.subtitle {
     color: var(--cardText);
     letter-spacing: 5px;
     padding: 10px 0;
     text-transform: uppercase;
 }
 
-.summary-card .increase {
+.count-increase{
     color: var(--limeGreen);
+}
+
+.count-decrease {
+    color: var(--brightRed);
+}
+
+.summary-card .count-increase, .summary-card .count-decrease{
     padding: 10px 0;
     font-weight: 800;
 }
 
-#overview {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* You can set flex-wrap and
-       flex-direction individually */
-    flex-direction: row;
-    flex-wrap: wrap;
-    /* Or do it all in one line
-      with flex flow */
-    /* flex-flow: row wrap; */
-    /* tweak where items line
-       up on the row
-       valid values are: flex-start,
-       flex-end, space-between,
-       space-around, stretch */
-    align-content: flex-end;
+
+#overview .container h3 {
+    margin: 50px 0
+}
+
+#overview-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    grid-gap: 1rem;
  }
-       
+
+ .overview-card{
+     background: var(--cardBackground);
+     border-radius: 10px;
+     margin: 10px 0;
+     min-height: 20vh;
+ }
+
+ .overview-header, .overview-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.overview-card .decrease {
+    color: var(--brightRed);
+    font-weight: 800;
+}
+
+.overview-content span img {
+    margin-left: 100px;
+    margin-top: -5px;
+}
