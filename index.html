@@ -26,150 +26,187 @@
 
 <body>
 
-	<div id="header">
+	<div id="top-container">
+	</div>
+
+	<div id="lower-container">
+
 		<div class="container">
-			<div id="header-text">
-				<h2>Social Media Dashboard</h2>
-				<p>Total Followers: 23,004</p>
+			<div id="header">
+				<div id="header-text">
+					<h2>Social Media Dashboard</h2>
+					<p>Total Followers: 23,004</p>
+				</div>
+				
+				<label class="switch">
+					<input id="toggle" type="checkbox" id="checkbox" checked>
+					<span class="slider round"></span>
+				</label>
+			</div>
+
+			<div id="summary">
+				<div class="summary-card" id="facebook">
+					<p class="title">@nathanf</p>
+					<h2 class="count">1987</h2>
+					<p class="subtitle">Followers</p>
+					<span><img src="./images/icon-up.svg" alt="" srcset=""></span>
+					<span class="count-increase">12 Today</span>
+				</div>
+				<div class="summary-card" id="twitter">
+					<p class="title">@nathanf</p>
+					<h2 class="count">1044</h2>
+					<p class="subtitle">Followers</p>
+					<span><img src="./images/icon-up.svg" alt="" srcset=""></span>
+					<span class="count-increase">99 Today</span>
+				</div>
+				<div class="summary-card" id="instagram">
+					<p class="title">@realnathanf</p>
+					<h2 class="count">11k</h2>
+					<p class="subtitle">Followers</p>
+					<span><img src="./images/icon-up.svg" alt="" srcset=""></span>
+					<span class="count-increase">144 Today</span>
+				</div>
+				<div class="summary-card" id="youtube">
+					<p class="title">Nathan F.</p>
+					<h2 class="count">8239</h2>
+					<p class="subtitle">Subscribers</p>
+					<span><img src="./images/icon-down.svg" alt="" srcset=""></span>
+					<span class="count-decrease">144 Today</span>
+				</div>
 			</div>
 			
-			<label class="switch">
-				<input id="toggle" type="checkbox" id="checkbox" checked>
-				<span class="slider round"></span>
-			</label>
 		</div>
 
-	</div>
-
-	<div id="summary">
-		<div class="container">
-			<div class="summary-card" id="facebook">
-				<p class="title">@nathanf</p>
-				<h2 class="count">1987</h2>
-				<p class="subtitle">Followers</p>
-				<span><img src="./images/icon-up.svg" alt="" srcset=""></span>
-				<span class="count-increase">12 Today</span>
-			</div>
-			<div class="summary-card" id="twitter">
-				<p class="title">@nathanf</p>
-				<h2 class="count">1044</h2>
-				<p class="subtitle">Followers</p>
-				<span><img src="./images/icon-up.svg" alt="" srcset=""></span>
-				<span class="count-increase">99 Today</span>
-			</div>
-			<div class="summary-card" id="instagram">
-				<p class="title">@realnathanf</p>
-				<h2 class="count">11k</h2>
-				<p class="subtitle">Followers</p>
-				<span><img src="./images/icon-up.svg" alt="" srcset=""></span>
-				<span class="count-increase">144 Today</span>
-			</div>
-			<div class="summary-card" id="youtube">
-				<p class="title">Nathan F.</p>
-				<h2 class="count">8239</h2>
-				<p class="subtitle">Subscribers</p>
-				<span><img src="./images/icon-down.svg" alt="" srcset=""></span>
-				<span class="count-decrease">144 Today</span>
+		</div>
+		<!-- <div id="summary">
+			<div class="container">
+				<div class="summary-card" id="facebook">
+					<p class="title">@nathanf</p>
+					<h2 class="count">1987</h2>
+					<p class="subtitle">Followers</p>
+					<span><img src="./images/icon-up.svg" alt="" srcset=""></span>
+					<span class="count-increase">12 Today</span>
+				</div>
+				<div class="summary-card" id="twitter">
+					<p class="title">@nathanf</p>
+					<h2 class="count">1044</h2>
+					<p class="subtitle">Followers</p>
+					<span><img src="./images/icon-up.svg" alt="" srcset=""></span>
+					<span class="count-increase">99 Today</span>
+				</div>
+				<div class="summary-card" id="instagram">
+					<p class="title">@realnathanf</p>
+					<h2 class="count">11k</h2>
+					<p class="subtitle">Followers</p>
+					<span><img src="./images/icon-up.svg" alt="" srcset=""></span>
+					<span class="count-increase">144 Today</span>
+				</div>
+				<div class="summary-card" id="youtube">
+					<p class="title">Nathan F.</p>
+					<h2 class="count">8239</h2>
+					<p class="subtitle">Subscribers</p>
+					<span><img src="./images/icon-down.svg" alt="" srcset=""></span>
+					<span class="count-decrease">144 Today</span>
+				</div>
 			</div>
 		</div>
-	</div>
-
-	<div id="overview">
-		<div class="container">
-			<h3>Overview - Today</h3>
-			<div id="overview-container">
-				<div class="overview-card">
-					<div class="overview-header">
-						<p class="title">Page Views</p>
-						<img src="./images/icon-facebook.svg" alt="" srcset="">
-					</div>
-					<div class="overview-content">
-						<h2 class="count">87</h2>
-						<span><img src="./images/icon-up.svg" alt="" srcset=""></span>
-						<span class="count-increase">3%</span>
-						<!-- <p class="overview-">3%</p> -->
-					</div>
-				</div>
-				<div class="overview-card">
-					<div class="overview-header">
-						<p class="title">Likes</p>
-						<img src="./images/icon-facebook.svg" alt="" srcset="">
-					</div>
-					<div class="overview-content">
-						<h2 class="count">52</h2>
-						<span><img src="./images/icon-down.svg" alt="" srcset=""></span>
-						<span class="count-decrease">2%</span>
-					</div>
-				</div>
-				<div class="overview-card">
-					<div class="overview-header">
-						<p class="title">Likes</p>
-						<img src="./images/icon-instagram.svg" alt="" srcset="">
-					</div>
-					<div class="overview-content">
-						<h2 class="count">5462</h2>
-						<span><img src="./images/icon-up.svg" alt="" srcset=""></span>
-						<span class="count-increase">2257%</span>
-					</div>
-				</div>
-				<div class="overview-card">
-					<div class="overview-header">
-						<p class="title">Profile Views</p>	
-						<img src="./images/icon-instagram.svg" alt="" srcset="">
-					</div>
-					<div class="overview-content">
-						<h2 class="count">52k</h2>
-						<span><img src="./images/icon-up.svg" alt="" srcset=""></span>
-						<span class="count-increase">1375%</span>
-					</div>
-				</div>
 	
-				<div class="overview-card">
-					<div class="overview-header">
-						<p class="title">Retweets</p>	
-						<img src="./images/icon-twitter.svg" alt="" srcset="">
+		<div id="overview">
+			<div class="container">
+				<h3>Overview - Today</h3>
+				<div id="overview-container">
+					<div class="overview-card">
+						<div class="overview-header">
+							<p class="title">Page Views</p>
+							<img src="./images/icon-facebook.svg" alt="" srcset="">
+						</div>
+						<div class="overview-content">
+							<h2 class="count">87</h2>
+							<span><img src="./images/icon-up.svg" alt="" srcset=""></span>
+							<span class="count-increase">3%</span>
+						</div>
 					</div>
-					<div class="overview-content">
-						<h2 class="count">117</h2>
-						<span><img src="./images/icon-up.svg" alt="" srcset=""></span>
-						<span class="count-increase">303%</span>
+					<div class="overview-card">
+						<div class="overview-header">
+							<p class="title">Likes</p>
+							<img src="./images/icon-facebook.svg" alt="" srcset="">
+						</div>
+						<div class="overview-content">
+							<h2 class="count">52</h2>
+							<span><img src="./images/icon-down.svg" alt="" srcset=""></span>
+							<span class="count-decrease">2%</span>
+						</div>
 					</div>
-				</div>
-				<div class="overview-card">
-					<div class="overview-header">
-						<p class="title">Likes</p>
-						<img src="./images/icon-twitter.svg" alt="" srcset="">
+					<div class="overview-card">
+						<div class="overview-header">
+							<p class="title">Likes</p>
+							<img src="./images/icon-instagram.svg" alt="" srcset="">
+						</div>
+						<div class="overview-content">
+							<h2 class="count">5462</h2>
+							<span><img src="./images/icon-up.svg" alt="" srcset=""></span>
+							<span class="count-increase">2257%</span>
+						</div>
 					</div>
-					<div class="overview-content">
-						<h2 class="count">507</h2>
-						<span><img src="./images/icon-up.svg" alt="" srcset=""></span>
-						<span class="count-increase">553%</span>
+					<div class="overview-card">
+						<div class="overview-header">
+							<p class="title">Profile Views</p>	
+							<img src="./images/icon-instagram.svg" alt="" srcset="">
+						</div>
+						<div class="overview-content">
+							<h2 class="count">52k</h2>
+							<span><img src="./images/icon-up.svg" alt="" srcset=""></span>
+							<span class="count-increase">1375%</span>
+						</div>
 					</div>
-				</div>
-				<div class="overview-card">
-					<div class="overview-header">
-						<p class="title">Likes</p>
-						<img src="./images/icon-instagram.svg" alt="" srcset="">
+		
+					<div class="overview-card">
+						<div class="overview-header">
+							<p class="title">Retweets</p>	
+							<img src="./images/icon-twitter.svg" alt="" srcset="">
+						</div>
+						<div class="overview-content">
+							<h2 class="count">117</h2>
+							<span><img src="./images/icon-up.svg" alt="" srcset=""></span>
+							<span class="count-increase">303%</span>
+						</div>
 					</div>
-					<div class="overview-content">
-						<h2 class="count">107</h2>
-						<span><img src="./images/icon-down.svg" alt="" srcset=""></span>
-						<span class="count-decrease">19%</span>
+					<div class="overview-card">
+						<div class="overview-header">
+							<p class="title">Likes</p>
+							<img src="./images/icon-twitter.svg" alt="" srcset="">
+						</div>
+						<div class="overview-content">
+							<h2 class="count">507</h2>
+							<span><img src="./images/icon-up.svg" alt="" srcset=""></span>
+							<span class="count-increase">553%</span>
+						</div>
 					</div>
-				</div>
-				<div class="overview-card">
-					<div class="overview-header">
-						<p class="title">Total Views</p>		
-						<img src="./images/icon-instagram.svg" alt="" srcset="">
+					<div class="overview-card">
+						<div class="overview-header">
+							<p class="title">Likes</p>
+							<img src="./images/icon-instagram.svg" alt="" srcset="">
+						</div>
+						<div class="overview-content">
+							<h2 class="count">107</h2>
+							<span><img src="./images/icon-down.svg" alt="" srcset=""></span>
+							<span class="count-decrease">19%</span>
+						</div>
 					</div>
-					<div class="overview-content">
-						<h2 class="count">1407</h2>
-						<span><img src="./images/icon-down.svg" alt="" srcset=""></span>
-						<span class="count-decrease">12% </span>
+					<div class="overview-card">
+						<div class="overview-header">
+							<p class="title">Total Views</p>		
+							<img src="./images/icon-instagram.svg" alt="" srcset="">
+						</div>
+						<div class="overview-content">
+							<h2 class="count">1407</h2>
+							<span><img src="./images/icon-down.svg" alt="" srcset=""></span>
+							<span class="count-decrease">12% </span>
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
+		</div> -->
 	</div>
 
 
