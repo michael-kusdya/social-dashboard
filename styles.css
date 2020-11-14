@@ -35,7 +35,7 @@
 }
 
 body{
-    background-color: var(--bg-lower-container);
+    background-color: var(--backgroundBody);
 }
 
 .container {
@@ -48,6 +48,12 @@ body{
   display: inline-block;
   width: 60px;
   height: 34px;
+}
+
+#switch-container {
+    display: flex;
+    justify-content: space-between;
+    width: 20%
 }
 
 /* Hide default HTML checkbox */
@@ -113,7 +119,7 @@ input:checked + .slider:before {
      position: relative;
 }
 
-.container #header{
+#header{
     justify-content: space-between;
     display: flex;
     flex-direction: row;
@@ -124,16 +130,36 @@ input:checked + .slider:before {
     color: var(--cardCountText)
 }
 
-#header-text p {
+#header-text p, #switch-container span {
     color: var(--cardText);
     font-weight: 800;
 }
 
+.divider {
+
+    display: none
+}
+
+@media screen and (max-width: 900px){
+    #header {
+        display: block;
+    }
+
+    #switch-container {
+        width: 100%;
+        margin: 50px 0;
+    }
+
+    .divider {
+        display: block;
+        border-top: 1px solid red;
+        margin: 20px 0;
+    }
+}
+
 #lower-container {
-    background-color: var(--backgroundBody);
-    /* margin-top: -150px; */
     position: absolute;
-    top: 250px;
+    top: 100px;
     width: 100%;
 }
 
@@ -211,8 +237,9 @@ div#youtube.summary-card {
 }
 
 
-#overview .container h3 {
-    margin: 50px 0
+#overview h3 {
+    margin: 50px 0;
+    color: var(--cardCountText)
 }
 
 #overview-container {
